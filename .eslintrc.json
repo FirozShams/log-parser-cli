@@ -1,0 +1,33 @@
+{
+    "root": true,
+    "settings": {
+        "import/resolver": {
+          "typescript": {}
+        }
+    },    
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "import",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "parserOptions": {
+       "project": "./tsconfig.json",
+       "tsconfigRootDir": "./"
+    },
+    "extends": [
+        "airbnb-typescript/base",        
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+        "indent": "off",
+        "dot-notation": "off",
+        "@typescript-eslint/dot-notation": ["off"],
+        "@typescript-eslint/indent": ["error", 4],
+        "newline-per-chained-call": 2,
+        "no-console": 2,
+        "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0}]
+    }
+}
